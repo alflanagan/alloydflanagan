@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  dbhost:
+    environment:
+      POSTGRES_PASSWORD: dumbpassword
+      POSTGRES_USER: alloydflanagan
+    image: postgres:alpine
+    volumes:
+      - alloydflanagan_data:/var/lib/postgresql/data
+  website:
+    image: alloydflanagan
+    build:
+      context: .
+    environment:
+      PYTHONPATH: /usr/src/app/alloydflanagan/
+    command: pipenv run ./manage.py runserver 0.0.0.0:3000
+    depends_on:
+      - dbhost
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./manage.py:/usr/src/app/alloydflanagan/manage.py
+      - ./Pipfile:/usr/src/app/alloydflanagan/Pipfile
+      - ./Pipfile.lock:/usr/src/app/alloydflanagan/Pipfile.lock
+      - ./alloydflanagan:/usr/src/app/alloydflanagan/alloydflanagan
+      - ./blogs:/usr/src/app/alloydflanagan/blogs
+      - ./startup.sh:/usr/src/app/alloydflanagan/startup.sh
+volumes:
+  alloydflanagan_data: {}
