@@ -14,7 +14,7 @@ services:
       context: .
     environment:
       PYTHONPATH: /usr/src/app/alloydflanagan/
-    command: pipenv run ./manage.py runserver 0.0.0.0:3000
+    command: bash -c "pipenv run ./manage.py migrate && pipenv run ./manage.py runserver 0.0.0.0:3000"
     depends_on:
       - dbhost
     ports:
