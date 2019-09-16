@@ -25,6 +25,7 @@ services:
       - ./Pipfile.lock:/usr/src/app/alloydflanagan/Pipfile.lock
       - ./alloydflanagan:/usr/src/app/alloydflanagan/alloydflanagan
       - ./blogs:/usr/src/app/alloydflanagan/blogs
+      - ./portfolios:/usr/src/app/alloydflanagan/portfolios
       - ./startup.sh:/usr/src/app/alloydflanagan/startup.sh
 volumes:
   alloydflanagan_data: {}
