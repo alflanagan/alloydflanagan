@@ -105,3 +105,4 @@ venv.bak/
 # user-specific project settings (wingware wingpro)
 *.wpu
 /.vscode
+/static

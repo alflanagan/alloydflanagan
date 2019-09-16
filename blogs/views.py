@@ -1,5 +1,8 @@
-from django.shortcuts import render, HttpResponse
+"""Views of the blog app"""
+
+from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return HttpResponse(content=b"<p>Congrats, you've reached the blogs index view</p>")
+    """Simple view of blog titles, etc."""
+    return render(request, 'blogs/index.html')
