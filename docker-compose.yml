@@ -14,7 +14,7 @@ services:
       context: .
     environment:
       PYTHONPATH: /usr/src/app/alloydflanagan/
-    command: bash -c "pipenv run ./manage.py migrate && pipenv run ./manage.py runserver 0.0.0.0:3000"
+    command: ./startup.sh
     depends_on:
       - dbhost
     ports:
@@ -27,5 +27,6 @@ services:
       - ./blogs:/usr/src/app/alloydflanagan/blogs
       - ./portfolios:/usr/src/app/alloydflanagan/portfolios
       - ./startup.sh:/usr/src/app/alloydflanagan/startup.sh
+      - ./static:/usr/src/app/alloydflanagan/static
 volumes:
   alloydflanagan_data: {}

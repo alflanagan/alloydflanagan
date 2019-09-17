@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
+manage() {
+  pipenv run ./manage.py "$@"
+}
 
-pipenv run ./manage.py runserver 0.0.0.0:3000
+manage migrate
+manage collectstatic --noinput
+manage runserver 0.0.0.0:3000

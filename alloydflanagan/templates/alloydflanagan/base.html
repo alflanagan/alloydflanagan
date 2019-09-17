@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block page_title %}Adrian Flanagan's Website{% endblock %}</title>
-    {% load compile_static %}
     {% load static %}
     <!-- {{ csrf_meta_tags }}
     <meta name="keywords" content="{{ seo_keywords }}" />
@@ -15,7 +14,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
     -->
-    <link rel="stylesheet" href="{% static "styles/application.scss"|compile %}" />
+    <link rel="stylesheet" href="{% static "styles/bootstrap.css" %}" />
   </head>
 
   <body class="text-center">
