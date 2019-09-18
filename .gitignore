@@ -106,3 +106,4 @@ venv.bak/
 *.wpu
 /.vscode
 /static
+.sass-cache
