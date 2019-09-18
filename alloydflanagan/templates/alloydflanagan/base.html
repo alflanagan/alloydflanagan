@@ -14,7 +14,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
     -->
-    <link rel="stylesheet" href="{% static "styles/bootstrap.css" %}" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="{% static "alloydflanagan/js/bootstrap.bundle.min.js" %}"></script>
+    <link rel="stylesheet" href="{% static "alloydflanagan/styles/bootstrap.css" %}" />
   </head>
 
   <body class="text-center">
@@ -28,6 +33,17 @@
       {# include 'shared/application_footer.html' #}
 
       {# include 'shared/alerts.html' #}
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>

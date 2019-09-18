@@ -126,6 +126,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
 
+# designate a directory for global static files
+# (may be better to make them part of an app?)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'alloydflanagan', 'static')]
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',

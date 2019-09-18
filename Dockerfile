@@ -3,7 +3,7 @@ FROM python
 RUN apt-get update
 
 # ensure all deps for psycopg2 are installed
-RUN apt-get install -y python3-psycopg2 git postgresql-client
+RUN apt-get install -y python3-psycopg2 git postgresql-client sass
 
 RUN python3 -m pip install pipenv
 
