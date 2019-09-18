@@ -26,24 +26,14 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <div id="background"></div>
 
-      {# include 'shared/application_nav.html' #}
+      {% include 'shared/application_nav.html' %}
 
       {% block page_content %}{% endblock %}
 
       {# include 'shared/application_footer.html' #}
 
       {# include 'shared/alerts.html' #}
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
+
     </div>
   </body>
 </html>
