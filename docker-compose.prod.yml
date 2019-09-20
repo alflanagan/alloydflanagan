@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  dbhost:
+    environment:
+      POSTGRES_PASSWORD: dumbpassword
+      POSTGRES_USER: alloydflanagan
+    image: postgres:alpine
+    volumes:
+      - alloydflanagan_data:/var/lib/postgresql/data
+  website:
+    image: alflanagan/alloydflanagan
+    environment:
+      PYTHONPATH: /usr/src/app/alloydflanagan/
+    command: ./startup.sh
+    depends_on:
+      - dbhost
+    ports:
+      - "80:3000"
+volumes:
+  alloydflanagan_data: {}
