@@ -27,6 +27,5 @@ services:
       - ./blogs:/usr/src/app/alloydflanagan/blogs
       - ./portfolios:/usr/src/app/alloydflanagan/portfolios
       - ./startup.sh:/usr/src/app/alloydflanagan/startup.sh
-      - ./static:/usr/src/app/alloydflanagan/static
 volumes:
   alloydflanagan_data: {}

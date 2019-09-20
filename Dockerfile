@@ -11,10 +11,12 @@ RUN adduser --gecos '' --disabled-password alloydflanagan
 
 RUN mkdir -p /usr/src/app/alloydflanagan && chown alloydflanagan:alloydflanagan /usr/src/app/alloydflanagan
 
-USER alloydflanagan
-
 WORKDIR /usr/src/app/alloydflanagan
 
 COPY . .
+
+RUN chown -R alloydflanagan:alloydflanagan .
+
+USER alloydflanagan
 
 RUN pipenv sync
