@@ -8,3 +8,7 @@ def about_me(request):
 def home(request):
     """Initial view for users"""
     return render(request, "pages/home.html")
+
+def contact(request):
+    """My contact information page"""
+    return render(request, "pages/contact.html")
