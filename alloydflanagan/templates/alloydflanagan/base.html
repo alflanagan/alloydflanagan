@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block page_title %}Adrian Flanagan's Website{% endblock %}</title>
     {% load static %}
-    <!-- {{ csrf_meta_tags }}
-    <meta name="keywords" content="{{ seo_keywords }}" />
+    {% load render_bundle from webpack_loader %}
+    {% render_bundle 'main' %}
 
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
-    -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-    <script src="{% static "alloydflanagan/js/bootstrap.bundle.min.js" %}"></script>
     <link rel="stylesheet" href="{% static "alloydflanagan/styles/bootstrap.css" %}" />
     <link rel="stylesheet" href="{% static  "alloydflanagan/styles/application.css" %}" />
   </head>

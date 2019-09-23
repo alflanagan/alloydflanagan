@@ -1,0 +1,37 @@
+{
+  "name": "alloydflanagan",
+  "version": "1.0.0",
+  "description": "Collection of modules used by my personal website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alflanagan/alloydflanagan.git"
+  },
+  "author": "A. Lloyd Flanagan",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/alflanagan/alloydflanagan/issues"
+  },
+  "homepage": "https://github.com/alflanagan/alloydflanagan#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "standard": "^14.3.1",
+    "webpack": "^4.40.2",
+    "webpack-bundle-tracker": "^0.4.2-beta",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "jquery": "^3.4.1",
+    "sortablejs": "^1.10.0"
+  }
+}
