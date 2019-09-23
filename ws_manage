@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker container exec -it alloydflanagan_website_1 pipenv run python3 manage.py "$@"
