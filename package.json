@@ -24,14 +24,18 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "standard": "^14.3.1",
+    "style-loader": "^1.0.0",
     "webpack": "^4.40.2",
     "webpack-bundle-tracker": "^0.4.2-beta",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "sortablejs": "^1.10.0"
   }
 }

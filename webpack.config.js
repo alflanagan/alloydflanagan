@@ -18,7 +18,14 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' }
+      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader', // inject CSS to page
+          'css-loader' // translates CSS to CommonJS modules
+        ]
+      }
     ]
   },
 
