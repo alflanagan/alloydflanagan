@@ -212,7 +212,10 @@ h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('david-moum-tHvbNCwZBVA-unsplash.jpg') no-repeat;
+  // background: url('../images/david-moum-tHvbNCwZBVA-unsplash.jpg');
+  // webpack isn't converting this URL (why?), so use final URL instead
+  background: url('/static/webpack_bundles/images/95c0db09f92dfc91651b6e2e5863f0e8.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
