@@ -6,9 +6,8 @@
     <title>{% block page_title %}Adrian Flanagan's Website{% endblock %}</title>
     {% load static %}
     {% load render_bundle from webpack_loader %}
-    {% render_bundle 'main' %}
+    {% render_bundle 'main' 'css' %}
 
-    <link rel="stylesheet" href="{% static  "alloydflanagan/styles/application.css" %}" />
   </head>
 
   <body class="text-center">
@@ -24,5 +23,6 @@
       {# include 'shared/alerts.html' #}
 
     </div>
+    {% render_bundle 'main' 'js' %}
   </body>
 </html>

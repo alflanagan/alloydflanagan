@@ -25,12 +25,36 @@ module.exports = {
           'style-loader', // inject CSS to page
           'css-loader' // translates CSS to CommonJS modules
         ]
+      },
+      {
+        test: /\.(scss)$/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            plugins: function () {
+              return [
+                require('autoprefixer')
+              ]
+            }
+          }
+        }, {
+          loader: 'sass-loader'
+        }]
+      }, {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [{
+          loader: 'file-loader'
+        }]
       }
     ]
   },
 
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.css', '.scss', '.jpg']
   }
 }

@@ -4,5 +4,5 @@ manage() {
 }
 
 manage migrate
-manage collectstatic --noinput
+# manage collectstatic --noinput
 manage runserver 0.0.0.0:3000

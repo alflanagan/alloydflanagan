@@ -1,5 +1,5 @@
 {% extends "alloydflanagan/base.html" %}
-  {% load static %}
+  {% load webpack_static from webpack_loader %}
   {% block page_content %}
 
   <div class="app-card-container">
@@ -9,8 +9,7 @@
     <div class="row">
       <div class="col-md-4">
 
-        <img src="{% static 'pages/images/profile.jpg' %}"
-            width="100%"
+        <img src="{% webpack_static 'images/pages/profile_small.jpg' %}"
             alt="A Lloyd Flanagan Headshot"
             class="profile-img">
 

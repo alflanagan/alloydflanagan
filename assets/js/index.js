@@ -1,4 +1,6 @@
 import 'jquery'
 import 'sortablejs'
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/scss/bootstrap.scss'
+import '../styles/application.scss'
+import '../images/pages/profile.jpg'

@@ -1,11 +1,12 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap.css";
+@import "custom";
+@import "bootstrap/scss/bootstrap.scss";
 
 @import url('https://fonts.googleapis.com/css?family=Cantata+One|Roboto&display=swap');
 
 $primary-font-stack: 'Cantata One', serif;
 $secondary-font-stack: 'Roboto', sans-serif;
-$background-image: 'david-moum-tHvbNCwZBVA-unsplash.jpg';
+// $background-image: '/static/webpack_bundles/images/david-moum-tHvbNCwZBVA-unsplash.jpg';
 
 /*
  * Globals
@@ -211,7 +212,7 @@ h6 {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url($background-image) no-repeat;
+  background: image-url('david-moum-tHvbNCwZBVA-unsplash.jpg') no-repeat;
   background-size: cover;
 }
 
