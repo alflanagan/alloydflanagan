@@ -15,6 +15,7 @@ psycopg2 = "*"
 pillow = "*"
 django-static-precompiler = "*"
 django-webpack-loader = "*"
+uwsgi = "*"
 
 [requires]
 python_version = "3.7"
