@@ -11,11 +11,11 @@ yapf = "*"
 
 [packages]
 django = "*"
-psycopg2 = "*"
+psycopg2-binary = "*"
 pillow = "*"
 django-static-precompiler = "*"
 django-webpack-loader = "*"
 uwsgi = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
