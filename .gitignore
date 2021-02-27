@@ -112,3 +112,5 @@ venv.bak/
 webpack-stats.json
 # this is a symbolic link
 docker-compose.yml
+.*.wpr.*
+*.code-workspace
