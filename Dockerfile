@@ -1,9 +1,20 @@
 FROM python:3.9.2-slim
 
-RUN apt-get update
+RUN apt-get update && apt-get -y install gnupg2 wget sudo lsb-release
 
-# ensure all deps for psycopg2 are installed
-RUN apt-get install -y python3-psycopg2 git postgresql-client sass sudo gcc
+# and... Postrgres client for this image defaults to version 11, add repos so we can
+# get 13
+# Create the file repository configuration:
+RUN sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+# Import the repository signing key:
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+
+# Update the package lists:
+RUN apt-get update
+# Install the latest version of PostgreSQL.
+# If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
+RUN apt-get -y install postgresql-client-13 python3-psycopg2 git sass sudo gcc
 
 RUN python3 -m pip install pipenv
 
