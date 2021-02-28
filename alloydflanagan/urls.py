@@ -72,4 +72,5 @@ urlpatterns = [  # pylint: disable=invalid-name
     path('accounts/reset/done/',
          auth_views.PasswordResetCompleteView.as_view(),
          name='password_reset_complete'),
+    path('api/', include('rest_framework.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
