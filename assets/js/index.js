@@ -1,7 +1,0 @@
-import 'jquery'
-import 'sortablejs'
-import 'bootstrap'
-import 'bootstrap/scss/bootstrap.scss'
-import '../styles/application.scss'
-import '../images/pages/profile.jpg'
-import '../images/david-moum-tHvbNCwZBVA-unsplash.jpg'

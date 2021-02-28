@@ -102,15 +102,18 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-# user-specific project settings (wingware wingpro)
-*.wpu
+
 /.vscode
 /static
 .sass-cache
 /node_modules
 /assets/webpack_bundles
 webpack-stats.json
+
 # this is a symbolic link
 docker-compose.yml
+
+# config files for my IDEs
+*.wp[ru]
 .*.wpr.*
 *.code-workspace
