@@ -20,16 +20,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./manage.py:/usr/src/app/alloydflanagan/manage.py
-      - ./Pipfile:/usr/src/app/alloydflanagan/Pipfile
-      - ./Pipfile.lock:/usr/src/app/alloydflanagan/Pipfile.lock
-      - ./alloydflanagan:/usr/src/app/alloydflanagan/alloydflanagan
-      - ./blogs:/usr/src/app/alloydflanagan/blogs
-      - ./portfolios:/usr/src/app/alloydflanagan/portfolios
-      - ./pages:/usr/src/app/alloydflanagan/pages
-      - ./startup.sh:/usr/src/app/alloydflanagan/startup.sh
-      - ./webpack-stats.json:/usr/src/app/alloydflanagan/webpack-stats.json
-      - ./assets:/usr/src/app/alloydflanagan/assets
+      - .:/usr/src/app/alloydflanagan/
 
 volumes:
   alloydflanagan_data:
